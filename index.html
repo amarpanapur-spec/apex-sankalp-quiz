@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111a42"><meta name="description" content="APEX SANKALP COMPETITIVE CLASSES — Online Test Portal">
+  <title>APEX SANKALP | Online Test Portal</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="APEX SANKALP Home"><span class="brand-mark">AS</span><span><b>APEX SANKALP</b><small>COMPETITIVE CLASSES</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="मेन्यू">☰</button>
+    <nav id="mainNav"><a href="#tests">ऑनलाइन टेस्ट</a><a href="#leaderboard">लीडरबोर्ड</a><a href="#how">कैसे दें?</a><a class="admin-link" href="admin.html">Admin ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><span class="eyebrow">🎯 YOUR SUCCESS, OUR MISSION</span><h1>तैयारी को दीजिए<br><em>एक नई उड़ान।</em></h1><p>Daroga • Bihar Police • BPSC • BSSC • SSC • Railway</p><div class="hero-pills"><span>⏱️ Live Timer</span><span>🏆 Instant Result</span><span>📊 Performance</span></div></div>
+      <div class="hero-card"><div class="trophy">🏆</div><span class="card-kicker">DAILY PRACTICE</span><strong>आज का लक्ष्य</strong><p>हर दिन अभ्यास करें, अपनी रैंक सुधारें और सफलता की ओर बढ़ें।</p><a href="#tests" class="btn btn-gold">टेस्ट शुरू करें <span>→</span></a></div>
+    </section>
+
+    <section class="welcome panel" id="studentPanel">
+      <div><span class="eyebrow">STUDENT ENTRY</span><h2 id="welcomeTitle">अपना टेस्ट शुरू करें</h2><p class="muted">नाम और मोबाइल नंबर दर्ज करें। OTP की आवश्यकता नहीं है।</p></div>
+      <form id="studentForm" class="student-form"><label>विद्यार्थी का नाम<input id="studentName" type="text" placeholder="अपना पूरा नाम लिखें" maxlength="60" required></label><label>मोबाइल नंबर<input id="studentPhone" type="tel" inputmode="numeric" placeholder="10 अंकों का मोबाइल नंबर" pattern="[6-9][0-9]{9}" maxlength="10" required></label><button class="btn btn-primary" type="submit">आगे बढ़ें <span>→</span></button></form>
+      <div id="studentBadge" class="student-badge hidden"><span class="avatar" id="avatarInitial">S</span><span><b id="currentStudent"></b><small id="currentPhone"></small></span><button id="changeStudent" class="text-btn">बदलें</button></div>
+    </section>
+
+    <section class="section" id="tests"><div class="section-heading"><div><span class="eyebrow">PICK YOUR CHALLENGE</span><h2>परीक्षा चुनें</h2><p class="muted">अपनी तैयारी के अनुसार टेस्ट चुनें।</p></div><span class="section-count" id="testCount">DEMO TESTS</span></div>
+      <div class="filters" id="categoryFilters"><button class="filter active" data-filter="सभी">सभी</button><button class="filter" data-filter="Bihar Police">Bihar Police</button><button class="filter" data-filter="BPSC / BSSC">BPSC / BSSC</button><button class="filter" data-filter="SSC">SSC</button><button class="filter" data-filter="Railway">Railway</button><button class="filter" data-filter="Science">Science</button></div>
+      <div class="quiz-grid" id="quizGrid"><div class="loading-card">टेस्ट लोड हो रहे हैं…</div></div>
+    </section>
+
+    <section class="leader-section" id="leaderboard"><div class="section-heading"><div><span class="eyebrow">TOP PERFORMERS</span><h2>🏆 लीडरबोर्ड</h2><p class="muted">सर्वश्रेष्ठ प्रदर्शन करने वाले विद्यार्थी।</p></div><span class="section-count">TOP 10</span></div><div class="leader-table panel"><div class="leader-head"><span>रैंक</span><span>विद्यार्थी</span><span>टेस्ट</span><span>स्कोर</span></div><div id="leaderRows"><div class="empty-state">अभी कोई रिजल्ट उपलब्ध नहीं है। पहला टेस्ट देकर शुरुआत करें!</div></div><p class="privacy-note">लीडरबोर्ड पर नाम और स्कोर दिखेंगे। मोबाइल नंबर सार्वजनिक नहीं किया जाता।</p></div></section>
+
+    <section class="how-section" id="how"><span class="eyebrow">SIMPLE. SMART. EFFECTIVE.</span><h2>टेस्ट कैसे दें?</h2><div class="steps"><article><b>01</b><h3>प्रवेश करें</h3><p>अपना नाम और मोबाइल नंबर भरें।</p></article><article><b>02</b><h3>टेस्ट चुनें</h3><p>परीक्षा या विषय के अनुसार टेस्ट खोलें।</p></article><article><b>03</b><h3>प्रदर्शन देखें</h3><p>स्कोर, Accuracy और सही-गलत प्रश्न देखें।</p></article></div></section>
+  </main>
+  <footer><div class="brand footer-brand"><span class="brand-mark">AS</span><span><b>APEX SANKALP</b><small>COMPETITIVE CLASSES</small></span></div><p>ज्ञान • अनुशासन • सफलता</p><small>© <span id="year"></span> APEX SANKALP COMPETITIVE CLASSES</small></footer>
+
+  <div class="modal hidden" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="quizTitle"><div class="quiz-shell"><div class="quiz-top"><div><span class="eyebrow">APEX SANKALP • ONLINE TEST</span><h2 id="quizTitle">टेस्ट</h2></div><button class="icon-btn" id="closeQuiz" aria-label="बंद करें">✕</button></div><div class="quiz-meta"><span id="questionProgress">प्रश्न 1/10</span><span class="timer" id="timer">⏱ 01:00</span><span id="marksMeta">+1 / −0.25</span></div><div class="progress-track"><span id="progressBar"></span></div><div class="question-area"><div class="question-label" id="questionLabel">QUESTION 01</div><h3 id="questionText"></h3><div class="option-list" id="optionList"></div></div><div class="quiz-bottom"><button class="btn btn-quiet" id="skipBtn">छोड़ें</button><button class="btn btn-primary" id="nextBtn">अगला प्रश्न →</button></div><div class="quiz-footnote">उत्तर चुनने के बाद अगला प्रश्न दबाएँ। समय समाप्त होने पर अगला प्रश्न अपने-आप खुलेगा।</div></div></div>
+  <div class="modal hidden" id="scoreModal" role="dialog" aria-modal="true"><div class="score-card"><div class="score-icon">🏅</div><span class="eyebrow">PROGRESS CHECK</span><h2>आपका अब तक का स्कोर</h2><div class="big-score" id="interimScore">0</div><p id="interimDetail">10 में से 0 सही</p><button class="btn btn-primary" id="continueBtn">आगे बढ़ें →</button></div></div>
+  <div class="modal hidden" id="resultModal" role="dialog" aria-modal="true"><div class="result-card"><button class="icon-btn result-close" id="closeResult" aria-label="बंद करें">✕</button><div class="score-icon">🎉</div><span class="eyebrow">TEST COMPLETED</span><h2>बहुत अच्छा प्रयास!</h2><p class="muted" id="resultStudent"></p><div class="result-score"><span>आपका स्कोर</span><strong id="finalScore">0</strong><small id="totalMarks">/ 0</small></div><div class="result-stats"><div><b id="correctCount">0</b><span>सही</span></div><div><b id="wrongCount">0</b><span>गलत</span></div><div><b id="skipCount">0</b><span>छोड़े</span></div><div><b id="accuracy">0%</b><span>Accuracy</span></div></div><div class="result-actions"><button class="btn btn-primary" id="reviewBtn">उत्तर समीक्षा</button><button class="btn btn-quiet" id="doneBtn">होम पर जाएँ</button></div><div id="reviewArea" class="review-area hidden"></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body></html>
